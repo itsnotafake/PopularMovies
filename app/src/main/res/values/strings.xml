@@ -1,0 +1,10 @@
+<resources>
+    <!-- Android Manifest strings -->
+    <string name="app_name">PopularMovies</string>
+
+    <!-- Menu Strings -->
+    <string name="action_settings">Settings</string>
+
+    <!-- Fragment and Activity Strings -->
+    <string name="hello_world">Hello World!</string>
+</resources>
