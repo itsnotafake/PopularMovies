@@ -5,6 +5,28 @@
     <!-- Menu Strings -->
     <string name="action_settings">Settings</string>
 
-    <!-- Fragment and Activity Strings -->
-    <string name="hello_world">Hello World!</string>
+    <!-- Main Activity and Fragment Strings -->
+    <string name="title_activity_movie_fragment">MovieFragment</string>
+    <string name="pref_selection_default" translatable="false">popular</string>
+    <string name="API_KEY" translatable="false"></string>
+    <string name="base_URL" translatable="false">http://api.themoviedb.org/3/movie/</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <!-- Detail Activity and Fragment Strings -->
+    <string name="detail_rating">Rating</string>
+    <string name="detail_title">Title</string>
+    <string name="detail_release" translatable="false">Release</string>
+    <string name="detail_synopsis">Synopsis</string>
+
+    <!-- SETTINGS STRINGS -->
+    <!-- Strings for sortBy setting -->
+    <string name="pref_sortBy_label">Choose how to sort movies</string>
+    <string name="pref_sortBy_key">sort</string>
+    <string name="pref_sortBy_default" translatable="false">popular</string>
+    <string name="pref_sortBy_label_popular">Sort movies by popularity</string>
+    <string name="pref_sortBy_label_toprated">Sort movies by rating</string>
+    <string name="pref_sortBy_popular" translatable="false">popular</string>
+    <string name="pref_sortBy_toprated" translatable="false">top_rated</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
 </resources>

@@ -1,0 +1,1 @@
+To run this application please insert your API Key into string.xml's API_KEY string under the Main Activity and Fragment Strings category. 
