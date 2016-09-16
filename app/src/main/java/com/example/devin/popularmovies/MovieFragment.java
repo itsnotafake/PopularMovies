@@ -171,7 +171,6 @@ public class MovieFragment extends Fragment {
                 String synopsis = movie.getString(TMDB_SYNOPSIS);
                 String release = movie.getString(TMDB_RELEASE);
                 String poster = movie.getString(TMDB_POSTER);
-                Log.v(LOG_TAG_ALPHA, Long.toString(movie.getLong(TMDB_RATING)));
                 String rating = Long.toString(movie.getLong(TMDB_RATING));
 
                 movieArray[i] = new Movie(title, synopsis, release, poster, rating);
