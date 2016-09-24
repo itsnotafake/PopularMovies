@@ -4,6 +4,8 @@
 
     <!-- Permission is necessary in order for PopularMovies to use the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission is necessary in order for PopularMovies to check for Internet Connectivity -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"

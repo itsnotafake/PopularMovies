@@ -1,7 +1,10 @@
 package com.example.devin.popularmovies;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -67,9 +70,14 @@ public class MovieFragment extends Fragment {
 
     public void updateMovies(){
         SharedPreferences sharedP = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        new FetchMovieTask().execute(sharedP.getString(
-                getString(R.string.pref_sortBy_key),
-                getString(R.string.pref_sortBy_default)));
+        ConnectivityManager cm = (ConnectivityManager) super.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+
+        if(netInfo != null && netInfo.isConnectedOrConnecting()){
+            new FetchMovieTask().execute(sharedP.getString(
+                    getString(R.string.pref_sortBy_key),
+                    getString(R.string.pref_sortBy_default)));
+        }
     }
 
     public class FetchMovieTask extends AsyncTask<String, Void, Movie[]> {
