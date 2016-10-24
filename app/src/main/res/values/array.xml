@@ -4,10 +4,12 @@
     <string-array name="pref_sortBy_options">
         <item>@string/pref_sortBy_label_popular</item>
         <item>@string/pref_sortBy_label_toprated</item>
+        <item>@string/pref_sortBy_label_favorite</item>
     </string-array>
 
     <string-array name="pref_sortBy_values">
         <item>@string/pref_sortBy_popular</item>
         <item>@string/pref_sortBy_toprated</item>
+        <item>@string/pref_sortBy_favorite</item>
     </string-array>
 </resources>

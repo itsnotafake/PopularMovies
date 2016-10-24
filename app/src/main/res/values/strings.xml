@@ -8,15 +8,21 @@
     <!-- Main Activity and Fragment Strings -->
     <string name="title_activity_movie_fragment">MovieFragment</string>
     <string name="pref_selection_default" translatable="false">popular</string>
+    <!--INSERT API KEY HERE -->
     <string name="API_KEY" translatable="false"></string>
     <string name="base_URL" translatable="false">http://api.themoviedb.org/3/movie/</string>
     <string name="title_activity_detail">DetailActivity</string>
 
     <!-- Detail Activity and Fragment Strings -->
-    <string name="detail_rating">Rating</string>
+    <string name="detail_trailerTitle">Trailers:</string>
     <string name="detail_title">Title</string>
+    <string name="detail_rating">Rating</string>
     <string name="detail_release" translatable="false">Release</string>
     <string name="detail_synopsis">Synopsis</string>
+    <string name="userReviews">User Reviews:</string>
+    <string name="requestReviews">reviews</string>
+    <string name="requestTrailers">videos</string>
+    <string name="favoriteButton">Favorite Video</string>
 
     <!-- SETTINGS STRINGS -->
     <!-- Strings for sortBy setting -->
@@ -25,8 +31,14 @@
     <string name="pref_sortBy_default" translatable="false">popular</string>
     <string name="pref_sortBy_label_popular">Sort movies by popularity</string>
     <string name="pref_sortBy_label_toprated">Sort movies by rating</string>
+    <string name="pref_sortBy_label_favorite">Sort movies by favorites</string>
     <string name="pref_sortBy_popular" translatable="false">popular</string>
     <string name="pref_sortBy_toprated" translatable="false">top_rated</string>
+    <string name="pref_sortBy_favorite" translatable="false">favorite</string>
     <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">popularmovies.example.com</string>
+    <string name="content_authority">com.example.devin.popularmovies</string>
 
 </resources>

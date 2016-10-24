@@ -4,24 +4,35 @@ import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.devin.popularmovies.sync.MovieSyncAdapter;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends ActionBarActivity implements MovieFragment.Callback {
+
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    private static final String DETAILFRAGMENT_TAG = "DFTAG";
+
+    private boolean mTwoPane;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new MovieFragment())
-                    .commit();
+        if(findViewById(R.id.fragment_detail) != null){
+            mTwoPane = true;
+        }else{
+            mTwoPane = false;
+            //getSupportActionBar().setElevation(0f);
         }
+
+        MovieSyncAdapter.initializeSyncAdapter(this);
     }
 
     @Override
@@ -46,5 +57,24 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemSelected(Movie movie){
+        if(mTwoPane){
+            Bundle args = new Bundle();
+            args.putParcelable("MyMovie", movie);
+
+            DetailFragment detailFragment = new DetailFragment();
+            detailFragment.setArguments(args);
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_detail, detailFragment, DETAILFRAGMENT_TAG)
+                    .commit();
+        }else{
+            Intent intent = new Intent(this, DetailActivity.class)
+                    .putExtra("MyMovie", movie);
+            startActivity(intent);
+        }
     }
 }

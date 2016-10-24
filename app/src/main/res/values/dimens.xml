@@ -5,10 +5,20 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!-- Detail Fragment dimen values -->
-    <dimen name="detailfragment_padding_left">10sp</dimen>
+    <dimen name="detailfragment_layout_padding">15sp</dimen>
 
     <dimen name="detailfragment_rating_padding_left">50sp</dimen>
-    <dimen name="detailfragment_rating_textsize">150sp</dimen>
+    <dimen name="detailfragment_rating_textsize">24sp</dimen>
+
     <dimen name="detailfragment_title_padding_top">10sp</dimen>
-    <dimen name="detailfragment_title_textsize">22sp</dimen>
+    <dimen name="detailfragment_title_textsize">24sp</dimen>
+
+    <dimen name="detailfragment_user_textsize">20sp</dimen>
+
+    <dimen name="detailfragment_trailerLinearLayout_padding">10sp</dimen>
+
+    <dimen name="detailfragment_trailerTitle_textsize">22sp</dimen>
+    <dimen name="detailfragment_trailerTitle_padding">10sp</dimen>
+
+    <dimen name="detailfragment_review_paddingtop">15sp</dimen>
 </resources>

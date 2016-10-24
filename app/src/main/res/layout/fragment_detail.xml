@@ -1,55 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/detailfragment_padding_left">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/detail_poster"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/detail_rating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingLeft="@dimen/detailfragment_rating_padding_left"
-                android:text="@string/detail_rating"
-                android:textSize="@dimen/detailfragment_rating_textsize" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/detail_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/detailfragment_title_padding_top"
-            android:text="@string/detail_title"
-            android:textSize="@dimen/detailfragment_title_textsize" />
-
-        <TextView
-            android:id="@+id/detail_release"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/detail_release" />
-
-        <TextView
-            android:id="@+id/detail_synopsis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/detail_synopsis" />
-
-    </LinearLayout>
-</ScrollView>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_detail_recyclerview"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/detailfragment_layout_padding">
+</android.support.v7.widget.RecyclerView>
